@@ -21,6 +21,7 @@ set noscrollbind
 set wildmenu
 set autochdir
 set showmatch
+set undofile
 
 hi Search cterm=NONE ctermfg=black ctermbg=red
 
@@ -51,8 +52,9 @@ call plug#begin()
 Plug 'vim-airline/vim-airline' " https://github.com/vim-airline/vim-airline
 Plug 'ctrlpvim/ctrlp.vim'      " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ryanoasis/vim-devicons'  " https://github.com/ryanoasis/vim-devicons + https://github.com/ryanoasis/nerd-fonts/
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'    " https://github.com/tpope/vim-commentary
-Plug 'airblade/vim-gitgutter'  " https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
 Plug 'mkitt/tabline.vim'       " https://github.com/mkitt/tabline.vim
 Plug 'SirVer/ultisnips'        " https://github.com/sirver/UltiSnips
 Plug 'arcticicestudio/nord-vim'
