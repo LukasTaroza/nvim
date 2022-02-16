@@ -75,6 +75,14 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'mfussenegger/nvim-lint'
 call plug#end()
 
+lua <<EOF
+require('lint').linters_by_ft = {
+	python = {'pylint'}
+}
+EOF
+
+au BufWritePost <buffer> lua require('lint').try_lint()
+
 " Set completeopt to have a better completion experience
 " :help completeopt
 " menuone: popup even when there's only one match
@@ -124,6 +132,13 @@ local opts = {
 }
 
 require('rust-tools').setup(opts)
+
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['pyright'].setup {
+capabilities = capabilities
+}
 EOF
 
 " Setup Completion
