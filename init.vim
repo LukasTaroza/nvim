@@ -54,6 +54,7 @@ Plug 'ctrlpvim/ctrlp.vim'      " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ryanoasis/vim-devicons'  " https://github.com/ryanoasis/vim-devicons + https://github.com/ryanoasis/nerd-fonts/
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'    " https://github.com/tpope/vim-commentary
+Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'mkitt/tabline.vim'       " https://github.com/mkitt/tabline.vim
 Plug 'SirVer/ultisnips'        " https://github.com/sirver/UltiSnips
