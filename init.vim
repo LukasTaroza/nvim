@@ -1,4 +1,4 @@
-let mapleader = " "
+let mapleader = ","
 
 filetype on
 filetype indent on
@@ -50,7 +50,6 @@ autocmd FileType netrw setl bufhidden=delete
 
 call plug#begin()
 Plug 'vim-airline/vim-airline' " https://github.com/vim-airline/vim-airline
-Plug 'ctrlpvim/ctrlp.vim'      " https://github.com/ctrlpvim/ctrlp.vim
 Plug 'ryanoasis/vim-devicons'  " https://github.com/ryanoasis/vim-devicons + https://github.com/ryanoasis/nerd-fonts/
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'    " https://github.com/tpope/vim-commentary
