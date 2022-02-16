@@ -35,6 +35,8 @@ noremap k gk
 
 map <leader>/ :let @/=''<cr> " clear search
 
+autocmd FileType rust map <buffer> <F9> :w<CR>:exec '!cargo run'<CR>
+
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-h>'
@@ -45,7 +47,6 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 autocmd FileType netrw setl bufhidden=delete
-
 
 
 call plug#begin()
@@ -70,6 +71,8 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 " Rust tools
 Plug 'simrat39/rust-tools.nvim'
+"
+Plug 'mfussenegger/nvim-lint'
 call plug#end()
 
 " Set completeopt to have a better completion experience
@@ -78,6 +81,8 @@ call plug#end()
 " noinsert: Do not insert text until a selection is made
 " noselect: Do not select, force user to select one from the menu
 set completeopt=menuone,noinsert,noselect
+
+set signcolumn=yes
 
 " Avoid showing extra messages when using completion
 set shortmess+=c
