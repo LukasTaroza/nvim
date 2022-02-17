@@ -1,0 +1,21 @@
+snippet shebang "adds shebang" b
+#!/usr/bin/env python3
+endsnippet
+
+snippet default "creates default file" b
+def main():
+
+if __name__ == "__main__":
+    main()
+endsnippet
+
+snippet log "adds log line" 
+logging.log($1) 
+endsnippet
+
+snippet startFixture "start Fixture" b
+@pytest.fixture(scope="session", autouse=True)
+def sessionstart(request):
+    request.addfinalizer(sessionfinish)
+def sessionfinish():
+endsnippet
