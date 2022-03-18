@@ -75,11 +75,11 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'mfussenegger/nvim-lint'
 call plug#end()
 
-lua <<EOF
-require('lint').linters_by_ft = {
-	python = {'pylint'}
-}
-EOF
+" lua <<EOF
+" require('lint').linters_by_ft = {
+" 	python = {'pylint'}
+" }
+" EOF
 
 au BufWritePost <buffer> lua require('lint').try_lint()
 
